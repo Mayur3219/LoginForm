@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:optional+span {
+            display: none;
+        }
+        input:required+span {
+            display: inline;
+            color:red;
+        }
+        input:required {
+            border:1px solid red;
+            box-shadow: 2px 2px 2px red;
+        }
+        input:optional {
+            border:1px solid goldenrod;
+            box-shadow: 2px 2px 2px goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" ><span>*</span></dd>
+        <dt>Age</dt>
+        <dd><input type="number"><span>*</span></dd>
+        <dt>Password</dt>
+        <dd><input type="password" required><span>*</span></dd>
+    </dl>
+    <dl>
+        <dt>Password</dt>
+        <dd>
+            <input type="password" class="Password" pattern="(?=.*[A-Z])\w{4,10}">
+            <div>Password 4 to 10 chars with atleast one Uppercase letter.</div>
+        </dd>
+    </dl>
+    <marquee>
+        .......Mayur Chavan >>>>>>
+    </marquee>
+</body>
+</html>
